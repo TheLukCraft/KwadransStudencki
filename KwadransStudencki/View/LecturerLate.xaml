@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KwadransStudencki.View.LecturerLate">
+    <StackLayout BackgroundColor="{StaticResource bckColor}">
+        <Frame BackgroundColor="{StaticResource bckColor}">
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                <Label TextColor="{StaticResource txtColor}"
+                                      Text="Poinformuj o spóźnieniu"
+                                       HorizontalOptions="CenterAndExpand"
+                                   FontSize="Medium"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                <Image Source="group.png"/>
+                                <Picker Title="Wybierz grupę"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Informatyka, VII sem, dzienne</x:String>
+                                            <x:String>Grafika, V sem, zaoczne</x:String>
+                                            <x:String>Informatyka, III sem, zaoczne</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                            </StackLayout>
+
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                <Image Source="messages.png"/>
+                                <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="contentEntry"
+                                       Placeholder="Powód"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Image Source="timer.png"/>
+                                <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="timerEntry"
+                                       Placeholder="podaj w [min]"
+                                       Keyboard="Numeric"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout></StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Button Text="Powiadom"
+                                Clicked="LecturerLate_Clicled"
+                                TextColor="{StaticResource txtColor}"        
+                                BackgroundColor="{StaticResource fieldColor}"
+                                 HorizontalOptions="FillAndExpand"
+                                 CornerRadius="{StaticResource borderRadius}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </Frame>
+    </StackLayout>
+</ContentPage>

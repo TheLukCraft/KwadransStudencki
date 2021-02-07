@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KwadransStudencki.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="txtColor">#F2F2F0</Color>
+            <Font x:Key="txtFont">Lobster-Regular</Font>
+            <Color x:Key="bckColor">#152230</Color>
+            <Color x:Key="fieldColor">#2C3F59</Color>
+            <Color x:Key="fieldBottomColor">#C0542C</Color>
+            <x:Int32 x:Key="borderRadius">10</x:Int32>
+
+
+
+            <Color x:Key="Primary">#2C3F59</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+            <Style TargetType="TabbedPage">
+                <Setter Property="BarBackgroundColor"
+                        Value="{DynamicResource Primary}"/>
+                <Setter Property="BarTextColor"
+                        Value="white"/>
+                <Setter Property="BackgroundColor"
+                        Value="{DynamicResource Primary}"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource txtColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource txtFont}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

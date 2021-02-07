@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KwadransStudencki.View.NewMessage">
+    <StackLayout BackgroundColor="#1c2c40">
+        <Picker x:Name="pickerOfLecturers" Title="Wybierz wykładowcę" SelectedIndexChanged="SelectedIndex">
+
+        </Picker>
+        <ListView x:Name="listOfLecturersView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Frame CornerRadius="10" Margin="10" Padding="5" BackgroundColor="{StaticResource fieldColor}">
+                                <Grid>
+
+                                </Grid>
+                            </Frame>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Editor BackgroundColor="#F2F2F0"
+               AutoSize="TextChanges" 
+                VerticalOptions="Start"/>
+        <Button HorizontalOptions="Center"
+                VerticalOptions="End"/>
+    </StackLayout>
+
+    <!--<RelativeLayout BackgroundColor="#1c2c40">
+
+        <Image RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, Property=X, ElementName=buttonLecturer}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Y, ElementName=buttonLecturer}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, Property=Height, ElementName=buttonLecturer, Factor=1}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, Property=Width, ElementName=buttonLecturer, Factor=0.2}"
+               Source="https://img.icons8.com/plasticine/100/000000/expand-arrow.png"
+               Scale="1"
+               
+                />
+        <Editor RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
+               BackgroundColor="#F2F2F0"
+               AutoSize="TextChanges" 
+                
+               />
+        <Button RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.75}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
+                BackgroundColor="#2C3F59"
+                Text="Wyślij"
+                FontSize="16"
+                TextColor="White"
+                x:Name="buttonSend"
+                CornerRadius="20"
+                />
+    </RelativeLayout>-->
+</ContentPage>

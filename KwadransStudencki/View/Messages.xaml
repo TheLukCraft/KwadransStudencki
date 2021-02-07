@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KwadransStudencki.View.Messages">
+    <StackLayout BackgroundColor="{StaticResource bckColor}">
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Text="Wyślij wiadomość"
+                    Clicked="NewMsgButton_Clicked"
+                    Grid.Row="0"
+                    Grid.RowSpan="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    CornerRadius="{StaticResource borderRadius}"
+                    BackgroundColor="{StaticResource fieldColor}"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource txtColor}"
+                    Margin="30,0,30,0"
+                    ImageSource="newMessage.png"/>
+                    
+        </Grid>
+        <ScrollView>
+            <ListView x:Name="messagesView" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Frame CornerRadius="10" Margin="10" Padding="5" BackgroundColor="{StaticResource fieldColor}">
+                                    <Grid>
+                                        <Label Text="{Binding Time}"
+                                                   Grid.Column="0"
+                                                   Grid.Row="0"
+                                                   Grid.ColumnSpan="2"/>
+                                        <!--<Label Text="{Binding IdMesseges}"
+                                                   Grid.Column="2"
+                                                   Grid.Row="0"/>-->
+                                        <!--<Label Text="{Binding IdMesseges}"
+                                                   Grid.Column="2"
+                                                   Grid.Row="0"/>-->
+                                        <!--<Label Text="{Binding ID_Sender}"
+                                                   Grid.Column="1"
+                                                   Grid.Row="3"/>-->
+                                        <!--<Label Text="{Binding ID_Reciever}"
+                                                   Grid.Column="0"
+                                                   Grid.Row="1"
+                                                   Grid.ColumnSpan="3"/>-->
+                                        <Label Text="{Binding Title}"
+                                                   Grid.Column="0"
+                                                   Grid.Row="1"
+                                                   Grid.ColumnSpan="2"/>
+                                        <Label Text="{Binding Content}"
+                                                   Grid.Column="0"
+                                                   Grid.ColumnSpan="2"
+                                                   Grid.Row="2"
+                                                   />
+                                        <StackLayout Grid.Column="1"
+                                            Grid.Row="0"
+                                            Grid.RowSpan="3"
+                                            Orientation="Horizontal"
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="EndAndExpand">
+                                        <ImageButton
+                                            HorizontalOptions="End"
+                                            Source="trash.png"
+                                            BackgroundColor="Transparent"
+                                            WidthRequest="50"
+                                            HeightRequest="70"
+                                            Clicked="OnImageNameTapped"
+                                            />
+                                        <ImageButton
+                                            HorizontalOptions="End"
+                                            Source="reply.png"
+                                            BackgroundColor="Transparent"
+                                            WidthRequest="50"
+                                            HeightRequest="70"
+                                            Clicked="OnImageNameTapped"
+                                            />
+                                        </StackLayout>
+                                        <!--<Image Source="imageName.png"  
+                                                Grid.Column="1"
+                                                Grid.Row="0">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                    Tapped="OnImageNameTapped"
+                                                    NumberOfTapsRequired="1" />         
+                                            </Image.GestureRecognizers>
+                                        </Image>-->
+                                       
+                                        <!--<button text="odpowiedz"
+                                                Clicked ="replyMessageButton"
+                                                grid.column="0"
+                                                grid.columnspan="3"
+                                                grid.row="3"
+                                                horizontaloptions="startandexpand"
+                                                />
+                                        <button text="usuń"
+                                                
+                                                grid.column="1"
+                                                grid.columnspan="3"
+                                                grid.row="3"
+                                                horizontaloptions="endandexpand"
+                                                />-->
+                                    </Grid>
+
+                                </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KwadransStudencki.View.InsertDB">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Padding="0,20,0,0">
+                <Button Text="Wyświetl wyniki"
+                    x:Name="ShowResults"
+                    Clicked="ShowResults_Clicked"
+                    />
+                <Label x:Name="typeOfUser"
+                      TextColor="{Binding txtColor}"/>
+                <Label x:Name="IDLabel"
+                       TextColor="{Binding txtColor}"/>
+                <Label x:Name="loginUser"
+                       TextColor="{Binding txtColor}"/>
+                <Label x:Name="passwordUser"
+                       TextColor="{Binding txtColor}"/>
+
+                <Label Text="Rejestracja starosty"
+                   TextColor="Black"
+                   FontSize="17"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Entry x:Name="loginUsersEntry"
+                   Placeholder="Login"
+                   />
+                <Entry x:Name="passwordUsersEntry"
+                    Placeholder="Hasło"
+                   />
+                <Button Text="Wstaw"
+                    x:Name="saveButtonLogin"
+                    Clicked="SaveButton_Clicked"
+                    />
+
+                <Label Text="Rejestracja Administratora"
+                   TextColor="Black"
+                   FontSize="17"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Entry x:Name="loginAdminEntry"
+                   Placeholder="Login"
+                   />
+                <Entry x:Name="passwordAdminEntry"
+                    Placeholder="Hasło"
+                   />
+                <Button Text="Wstaw"
+                    x:Name="saveButtonAdmin"
+                    Clicked="saveButtonAdmin_Clicked"
+                    />
+
+                <Label Text="Rejestracja Wykładowcy"
+                   TextColor="Black"
+                   FontSize="17"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Entry x:Name="loginLecturerEntry"
+                   Placeholder="Login"
+                   />
+                <Entry x:Name="passwordLecturerEntry"
+                    Placeholder="Hasło"
+                   />
+                <Entry x:Name="academicTitleLecturerEntry"
+                    Placeholder="Tytuł naukowy"
+                   />
+                <Entry x:Name="nameLecturerEntry"
+                    Placeholder="Imię i Nazwisko"
+                   />
+                <Button Text="Wstaw"
+                    x:Name="saveButtonLecturer"
+                    Clicked="saveButtonLecturer_Clicked"
+                    />
+
+                <Label Text="Wstawianie danych do Degrees"
+                   TextColor="Black"
+                   FontSize="17"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Entry x:Name="degreesEntry"
+                   Placeholder="Stopień"
+                   />
+                <Button Text="Wstaw"
+                    x:Name="saveButtonDegrees"
+                    Clicked="SaveButton_Clicked"
+                    />
+
+                <Label Text="Tworzenie wiadomości"
+                   TextColor="Black"
+                   FontSize="17"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Entry x:Name="ID_SenderMessegesEntry"
+                    Placeholder="ID wysyłającego"
+                   />
+                <Entry x:Name="ID_RecieverMessegesEntry"
+                    Placeholder="ID odbiorcy"
+                   />
+                <Entry x:Name="titleMessegesEntry"
+                    Placeholder="Tytuł"
+                   />
+                <Entry x:Name="contentMessegesEntry"
+                    Placeholder="Treść"
+                   />
+                <Button Text="Wstaw"
+                    x:Name="saveButtonMesseges"
+                    Clicked="SaveButtonMesseges_Clicked"
+                    />
+
+                <Label Text="Wstawianie danych do Mode"
+                   TextColor="Black"
+                   FontSize="17"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Entry x:Name="ModeOfStudy"
+                   Placeholder="Tryb studiów"
+                   />
+                <Button Text="Wstaw"
+                    x:Name="saveButtonModeOfStudy"
+                    Clicked="SaveButton_Clicked"
+                    />
+
+                <Label Text="Wstawianie danych do News"
+                   TextColor="Black"
+                   FontSize="17"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Entry x:Name="newsOfDateNewsEntry"
+                   Placeholder="Czas wstawienia"
+                   />
+                <Entry x:Name="newsContentEntry"
+                    Placeholder="treść"
+                   />
+                <Entry x:Name="newsSpecializationEntry"
+                    Placeholder="Kierunek"
+                   />
+                <Entry x:Name="newsSemestrEntry"
+                    Placeholder="semestr"
+                   />
+                <Entry x:Name="newsModeEntry"
+                    Placeholder="tryb studiów"
+                   />
+                <Entry x:Name="newsDateWhenEntry"
+                   Placeholder="kiedy obowiązuje"
+                   />
+                <Entry x:Name="newsDelayEntry"
+                   Placeholder="opóźnienie"
+                   />
+                <Button Text="Wstaw"
+                    x:Name="saveButtonDelay"
+                    Clicked="saveButtonNews_Clicked"
+                    />
+
+                <Label Text="Wstawianie danych do Specialization"
+                   TextColor="Black"
+                   FontSize="17"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Entry x:Name="Specialization"
+                    Placeholder="Kierunek"
+                   />
+                <Button Text="Wstaw"
+                    x:Name="saveButtonSpecialization"
+                    Clicked="SaveButton_Clicked"
+                    />
+                <Label Text="Wstawianie danych do Staroste"
+                   TextColor="Black"
+                   FontSize="17"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Entry x:Name="StarosteName"
+                    Placeholder="Imię"
+                   />
+                <Entry x:Name="StarosteSurName"
+                    Placeholder="Nazwisko"
+                   />
+                <Entry x:Name="StarosteLogin"
+                    Placeholder="login"
+                   />
+                <Button Text="Wstaw"
+                    x:Name="saveButtonStaroste"
+                    Clicked="SaveButton_Clicked"
+                    />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
