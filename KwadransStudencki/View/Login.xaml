@@ -30,7 +30,7 @@
             
             <StackLayout Orientation="Horizontal" Padding="0,20">
                 <Button Text="Zaloguj"
-                        TextColor="{StaticResource txtColor}"        
+                        TextColor="{StaticResource txtColor}"   
                         BackgroundColor="{StaticResource fieldColor}"
                         HorizontalOptions="FillAndExpand"
                         CornerRadius="{StaticResource borderRadius}"
