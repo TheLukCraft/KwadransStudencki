@@ -2,8 +2,46 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KwadransStudencki.View.Login">
-    <RelativeLayout BackgroundColor="#1c2c40">
-        <!--<Image Source="https://img.icons8.com/doodle/48/000000/menu.png"
+    <StackLayout BackgroundColor="{StaticResource bckColor}" Padding="40,0">
+        <StackLayout>
+            <Label Text="Zaloguj się"
+                   TextColor="{StaticResource txtColor}"
+                   FontSize="32"
+                   Padding="0,60,0,60"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+            <Entry
+                 Placeholder="Login"
+                 FontSize="24"
+                 ClearButtonVisibility="WhileEditing" 
+                 TextColor="#F2F2F0"
+                 x:Name="loginEntry"
+                 PlaceholderColor="{StaticResource txtColor}"
+                 />
+            <Entry  
+                 Placeholder="Hasło"
+                 FontSize="24"
+                 IsPassword="True"
+                 ClearButtonVisibility="WhileEditing" 
+                 TextColor="#F2F2F0"
+                 x:Name="passwordEntry"
+                PlaceholderColor="{StaticResource txtColor}"
+                 />
+            
+            <StackLayout Orientation="Horizontal" Padding="0,20">
+                <Button Text="Zaloguj"
+                        TextColor="{StaticResource txtColor}"        
+                        BackgroundColor="{StaticResource fieldColor}"
+                        HorizontalOptions="FillAndExpand"
+                        CornerRadius="{StaticResource borderRadius}"
+                        x:Name="logInButton"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </StackLayout>
+    <!--<RelativeLayout BackgroundColor="#1c2c40">
+        --><!--<Image Source="https://img.icons8.com/doodle/48/000000/menu.png"
                Margin="30,20,0,0"
                Scale="3"
                 x:Name="menu"
@@ -36,7 +74,7 @@
                 Type=Constant,
                 ElementName=menu,
                 Constant=0}"
-                     />-->
+                     />--><!--
         <Label     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.35}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.15}"
                    TextColor="White"
@@ -85,5 +123,5 @@
                 Clicked="LogInButton_Clicked"
                 x:Name="logInButton"
                 />
-    </RelativeLayout>
+    </RelativeLayout>-->
 </ContentPage>
