@@ -17,11 +17,11 @@ namespace KwadransStudencki
         }
         public App(string filePath)
         {
-            //InitializeComponent();
+            InitializeComponent();
             //Users users = new Users()
             //{
             //    Login = "admin",
-            //    Password = "admin",
+            //    Password = "Komenda1",
             //    TypeAccount = "Admin"
             //};
             //using (SQLiteConnection conn = new SQLiteConnection(filePath))

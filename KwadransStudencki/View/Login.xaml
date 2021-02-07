@@ -74,7 +74,7 @@
                 Type=Constant,
                 ElementName=menu,
                 Constant=0}"
-                     />--><!--
+                     />-->
         <Label     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.35}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.15}"
                    TextColor="White"
@@ -123,5 +123,5 @@
                 Clicked="LogInButton_Clicked"
                 x:Name="logInButton"
                 />
-    </RelativeLayout>-->
+    </RelativeLayout>
 </ContentPage>
