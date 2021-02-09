@@ -34,7 +34,7 @@
                         BackgroundColor="{StaticResource fieldColor}"
                         HorizontalOptions="FillAndExpand"
                         CornerRadius="{StaticResource borderRadius}"
-                        x:Name="logInButton"/>
+                        Clicked="LogInButton_Clicked"/>
 
             </StackLayout>
 
@@ -75,53 +75,5 @@
                 ElementName=menu,
                 Constant=0}"
                      />-->
-        <Label     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.35}"
-                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.15}"
-                   TextColor="White"
-                   FontSize="24"
-                   Text="Zaloguj się"
-                   x:Name="textLogin"
-                   />
-        <BoxView RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Height, ElementName=textLogin, Factor=7}"
-                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
-                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, Property=Height, ElementName=textLogin, Factor=0.1}"
-                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
-                 Color="#F25F29"
-                 x:Name="textEntryLogin"
-                 />
-        <BoxView RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Height, ElementName=textLogin, Factor=10}"
-                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
-                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, Property=Height, ElementName=textLogin, Factor=0.1}"
-                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
-                 Color="#F25F29"
-                 />
-        <Entry   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, ElementName=textEntryLogin, Factor=0.28}"
-                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, ElementName=textEntryLogin, Factor=0.42}"
-                 Placeholder="Login"
-                 FontSize="24"
-                 ClearButtonVisibility="WhileEditing" 
-                 TextColor="#F2F2F0"
-                 x:Name="loginEntry"
-                 />
-        <Entry   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, ElementName=textEntryLogin, Factor=0.43}"
-                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, ElementName=textEntryLogin, Factor=0.42}"
-                 Placeholder="Hasło"
-                 FontSize="24"
-                 IsPassword="True"
-                 ClearButtonVisibility="WhileEditing" 
-                 TextColor="#F2F2F0"
-                 x:Name="passwordEntry"
-                 />
-        <Button RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
-                BackgroundColor="#2C3F59"
-                Text="Zaloguj się"
-                FontSize="20"
-                TextColor="White"
-                Clicked="LogInButton_Clicked"
-                x:Name="logInButton"
-                />
-    </RelativeLayout>
+
 </ContentPage>

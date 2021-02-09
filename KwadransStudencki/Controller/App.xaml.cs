@@ -18,19 +18,19 @@ namespace KwadransStudencki
         public App(string filePath)
         {
             InitializeComponent();
-            //Users users = new Users()
-            //{
-            //    Login = "admin",
-            //    Password = "Komenda1",
-            //    TypeAccount = "Admin"
-            //};
-            //using (SQLiteConnection conn = new SQLiteConnection(filePath))
-            //{
-            //    conn.CreateTable<Users>();
-            //    int rowsAdded = conn.Insert(users);
-            //    conn.Close();
+            Users users = new Users()
+            {
+                Login = "admin",
+                Password = "admin",
+                TypeAccount = "Admin"
+            };
+            using (SQLiteConnection conn = new SQLiteConnection(filePath))
+            {
+                conn.CreateTable<Users>();
+                int rowsAdded = conn.Insert(users);
+                conn.Close();
 
-            //}
+            }
             Application.Current.Properties.Clear();
             MainPage = new NavigationPage(new MasterDetail());
             FilePath = filePath;
