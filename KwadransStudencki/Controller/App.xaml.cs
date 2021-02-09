@@ -18,16 +18,27 @@ namespace KwadransStudencki
         public App(string filePath)
         {
             InitializeComponent();
-            Users users = new Users()
+            //Users users = new Users()
+            //{
+            //    Login = "admin",
+            //    Password = "admin",
+            //    TypeAccount = "Admin"
+            //};
+            //using (SQLiteConnection conn = new SQLiteConnection(filePath))
+            //{
+            //    conn.CreateTable<Users>();
+            //    int rowsAdded = conn.Insert(users);
+            //    conn.Close();
+
+            //}
+            Specialization specialization = new Specialization()
             {
-                Login = "admin",
-                Password = "admin",
-                TypeAccount = "Admin"
+                NameOfSpecialization = "Grafika"
             };
             using (SQLiteConnection conn = new SQLiteConnection(filePath))
             {
-                conn.CreateTable<Users>();
-                int rowsAdded = conn.Insert(users);
+                conn.CreateTable<Specialization>();
+                int rowsAdded = conn.Insert(specialization);
                 conn.Close();
 
             }

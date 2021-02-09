@@ -79,7 +79,8 @@
                                             BackgroundColor="Transparent"
                                             WidthRequest="50"
                                             HeightRequest="70"
-                                            Clicked="OnImageNameTapped"
+                                            Clicked="DeleteMessage_Clicked"
+                                            CommandParameter="{Binding IdMessages}"
                                             />
                                         <ImageButton
                                             HorizontalOptions="End"

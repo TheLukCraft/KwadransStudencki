@@ -3,24 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KwadransStudencki.View.NewMessage">
     <StackLayout BackgroundColor="#1c2c40">
-        <Picker x:Name="pickerOfLecturers" Title="Wybierz wykładowcę" SelectedIndexChanged="SelectedIndex">
-
-        </Picker>
-        <ListView x:Name="listOfLecturersView" HasUnevenRows="True">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.View>
-                            <Frame CornerRadius="10" Margin="10" Padding="5" BackgroundColor="{StaticResource fieldColor}">
-                                <Grid>
-
-                                </Grid>
-                            </Frame>
-                        </ViewCell.View>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Label x:Name="ToUser"
+               Text="{Binding Source }"/>
         <Editor BackgroundColor="#F2F2F0"
                AutoSize="TextChanges" 
                 VerticalOptions="Start"/>

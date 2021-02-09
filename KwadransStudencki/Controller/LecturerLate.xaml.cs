@@ -17,13 +17,20 @@ namespace KwadransStudencki.View
         public LecturerLate()
         {
             InitializeComponent();
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                var listOfUsers = conn.Table<Specialization>().Select(x => x.NameOfSpecialization).ToList();
+                pickerLate.ItemsSource = listOfUsers;
+
+            }
+             
         }
         private void LecturerLate_Clicled(object sender, EventArgs e)
         {
             News news = new News()
             {
                 DateOfNews = DateTime.Now.ToString(),
-                Specialization = "Informatyka",
+                Specialization = pickerLate.SelectedItem.ToString(),
                 Semestr = "VII",
                 Mode = "Dzienne",
                 Content = contentEntry.Text,

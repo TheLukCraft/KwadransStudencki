@@ -21,13 +21,10 @@
                                 <Picker Title="Wybierz grupę"
                                         TitleColor="{StaticResource txtColor}"
                                         TextColor="{StaticResource txtColor}"
-                                        HorizontalOptions="FillAndExpand">
+                                        HorizontalOptions="FillAndExpand"
+                                        x:Name="pickerLate">
                                     <Picker.ItemsSource>
-                                        <x:Array Type="{x:Type x:String}">
-                                            <x:String>Informatyka, VII sem, dzienne</x:String>
-                                            <x:String>Grafika, V sem, zaoczne</x:String>
-                                            <x:String>Informatyka, III sem, zaoczne</x:String>
-                                        </x:Array>
+                                        
                                     </Picker.ItemsSource>
                                 </Picker>
                             </StackLayout>
