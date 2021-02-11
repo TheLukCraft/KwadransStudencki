@@ -34,7 +34,7 @@ namespace KwadransStudencki.View
                 { 
                     conn.Query<Message>("SELECT FROM Message WHERE IdMessages == " + (int)asc.CommandParameter);
                 }
-                Navigation.PushAsync(new NewMessage());
+                await Navigation.PushAsync(new NewMessage());
             }
             else
             {

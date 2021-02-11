@@ -31,17 +31,17 @@ namespace KwadransStudencki
             //    conn.Close();
 
             //}
-            Specialization specialization = new Specialization()
-            {
-                NameOfSpecialization = "Grafika"
-            };
-            using (SQLiteConnection conn = new SQLiteConnection(filePath))
-            {
-                conn.CreateTable<Specialization>();
-                int rowsAdded = conn.Insert(specialization);
-                conn.Close();
+            //Specialization specialization = new Specialization()
+            //{
+            //    NameOfSpecialization = "Grafika"
+            //};
+            //using (SQLiteConnection conn = new SQLiteConnection(filePath))
+            //{
+            //    conn.CreateTable<Specialization>();
+            //    int rowsAdded = conn.Insert(specialization);
+            //    conn.Close();
 
-            }
+            //}
             Application.Current.Properties.Clear();
             MainPage = new NavigationPage(new MasterDetail());
             FilePath = filePath;
