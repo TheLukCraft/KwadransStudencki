@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KwadransStudencki.Model;
+using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,16 @@ namespace KwadransStudencki.View
         public AdminPreview()
         {
             InitializeComponent();
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                var users = conn.Table<Users>().ToList();
+                UsersView.ItemsSource = users;
+                conn.Close();
+            }
         }
     }
 }

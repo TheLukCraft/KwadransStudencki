@@ -33,7 +33,12 @@ namespace KwadransStudencki.View
                 int rowsAdded = conn.Insert(users);
                 conn.Close();
                 if (rowsAdded > 0)
+                {
                     DisplayAlert("Udało się", "pomyślnie wstawiono", "ok");
+                    loginUsersEntry.Text = string.Empty;
+                    passwordUsersEntry.Text = string.Empty;
+                }
+                    
                 else
                 {
                     DisplayAlert("Błąd", "Nie wstawiono danych", "ok");
@@ -52,8 +57,8 @@ namespace KwadransStudencki.View
             Lecturers lecturers = new Lecturers()
             {
                 IdUser = users.IdUser,
-                //AcademicTitle = academicTitleLecturerEntry.Text,
-                //Name = nameLecturerEntry.Text
+                AcademicTitle = (string)pickerAcademicTitle.SelectedItem,
+                Name = nameLecturerEntry.Text
             };
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
@@ -63,7 +68,14 @@ namespace KwadransStudencki.View
                 int rowsAdded2 = conn.Insert(lecturers);
                 conn.Close();
                 if (rowsAdded > 0)
+                {
                     DisplayAlert("Udało się", "pomyślnie wstawiono", "ok");
+                    pickerAcademicTitle.SelectedIndex = -1;
+                    nameLecturerEntry.Text = string.Empty;
+                    loginLecturerEntry.Text = string.Empty;
+                    passwordLecturerEntry.Text = string.Empty;
+                }
+                    
                 else
                 {
                     DisplayAlert("Błąd", "Nie wstawiono danych", "ok");
@@ -71,7 +83,11 @@ namespace KwadransStudencki.View
             }
         }
 
-        private void CreateAdmin_Clicked(object sender, EventArgs e)
+        private void AddLecturerToGrup_Clicked(object sender, EventArgs e)
+        {
+
+        }
+            private void CreateAdmin_Clicked(object sender, EventArgs e)
         {
             Users users = new Users()
             {
@@ -85,12 +101,23 @@ namespace KwadransStudencki.View
                 int rowsAdded = conn.Insert(users);
                 conn.Close();
                 if (rowsAdded > 0)
+                {
                     DisplayAlert("Udało się", "pomyślnie wstawiono", "ok");
+                    loginAdminEntry.Text = string.Empty;
+                    passwordAdminEntry.Text = string.Empty;
+
+                }
+
                 else
                 {
                     DisplayAlert("Błąd", "Nie wstawiono danych", "ok");
                 }
             }
+        }
+
+        private void selectedGroupForStaroste(object sender, EventArgs e)
+        {
+
         }
     }
 }

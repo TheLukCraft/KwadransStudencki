@@ -22,11 +22,14 @@
                                     <Picker Title="Wybierz grupę dla starosty"
                                         TitleColor="{StaticResource txtColor}"
                                         TextColor="{StaticResource txtColor}"
-                                        HorizontalOptions="FillAndExpand"
-                                        x:Name="pickerLate">
-                                        <Picker.ItemsSource>
-
-                                        </Picker.ItemsSource>
+                                        HorizontalOptions="FillAndExpand">
+                                        <Picker.Items>
+                                            <x:String>Magister</x:String>
+                                            <x:String>Doktor</x:String>
+                                            <x:String>Doktor habilitiowany</x:String>
+                                            <x:String>Profesor nadzwyczajny</x:String>
+                                            <x:String>Profesor zwyczajny</x:String>
+                                        </Picker.Items>
                                     </Picker>
                                 </StackLayout>
 
@@ -83,10 +86,14 @@
                                         TitleColor="{StaticResource txtColor}"
                                         TextColor="{StaticResource txtColor}"
                                         HorizontalOptions="FillAndExpand"
-                                        x:Name="AcademicTitle">
-                                        <Picker.ItemsSource>
-
-                                        </Picker.ItemsSource>
+                                        x:Name="pickerAcademicTitle">
+                                        <Picker.Items>
+                                            <x:String>Magister</x:String>
+                                            <x:String>Doktor</x:String>
+                                            <x:String>Doktor habilitiowany</x:String>
+                                            <x:String>Profesor nadzwyczajny</x:String>
+                                            <x:String>Profesor zwyczajny</x:String>
+                                        </Picker.Items>
                                     </Picker>
                                 </StackLayout>
 
@@ -154,7 +161,7 @@
                                         TitleColor="{StaticResource txtColor}"
                                         TextColor="{StaticResource txtColor}"
                                         HorizontalOptions="FillAndExpand"
-                                        x:Name="pickerLate">
+                                        x:Name="pickGroupsForLecturer">
                                         <Picker.ItemsSource>
 
                                         </Picker.ItemsSource>
@@ -169,7 +176,7 @@
                                         TitleColor="{StaticResource txtColor}"
                                         TextColor="{StaticResource txtColor}"
                                         HorizontalOptions="FillAndExpand"
-                                        x:Name="pickerLate">
+                                        x:Name="pickLecturer">
                                         <Picker.ItemsSource>
 
                                         </Picker.ItemsSource>

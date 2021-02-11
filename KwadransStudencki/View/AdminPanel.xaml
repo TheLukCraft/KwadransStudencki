@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KwadransStudencki.View.AdminPanel"
              xmlns:local1="clr-namespace:KwadransStudencki.View">
-    <local1:AdminCreateUsers Title="Użytkownicy"/>
-    <local1:AdminCommunication Title="Komunikacja"/>
-    <local1:AdminSpecializations Title="Kierunki"/>
+    <local1:AdminCreateUsers IconImageSource="group.png"/>
+    <local1:AdminCommunication IconImageSource="messages.png"/>
+    <local1:AdminSpecializations IconImageSource="specialization.png"/>
+    <local1:AdminPreview IconImageSource="preview.png"/>
 </TabbedPage>
