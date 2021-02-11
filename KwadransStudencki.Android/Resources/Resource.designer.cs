@@ -11306,52 +11306,58 @@ namespace KwadransStudencki.Droid
 			public const int profile = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int reply = 2131165351;
+			public const int receiver = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int report = 2131165352;
+			public const int reply = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int report2 = 2131165353;
+			public const int report = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int searcher = 2131165354;
+			public const int report2 = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int semestr = 2131165355;
+			public const int searcher = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int settings = 2131165356;
+			public const int semestr = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int specialization = 2131165357;
+			public const int sender = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int student = 2131165358;
+			public const int settings = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int student2 = 2131165359;
+			public const int specialization = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int subject = 2131165360;
+			public const int student = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int test_custom_background = 2131165361;
+			public const int student2 = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int time = 2131165362;
+			public const int subject = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int timer = 2131165363;
+			public const int test_custom_background = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int tooltip_frame_dark = 2131165364;
+			public const int time = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int tooltip_frame_light = 2131165365;
+			public const int timer = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int trash = 2131165366;
+			public const int tooltip_frame_dark = 2131165366;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int tooltip_frame_light = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int trash = 2131165368;
 			
 			static Drawable()
 			{

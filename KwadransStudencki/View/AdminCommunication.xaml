@@ -2,11 +2,285 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KwadransStudencki.View.AdminCommunication">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ScrollView>
+        <StackLayout BackgroundColor="{StaticResource bckColor}">
+            <Frame BackgroundColor="{StaticResource bckColor}">
+                <TableView Intent="Form">
+                    <TableRoot>
+                        <TableSection>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Label TextColor="{StaticResource txtColor}"
+                                      Text="Tworzenie wiadomości testowej"
+                                       HorizontalOptions="CenterAndExpand"
+                                   FontSize="Medium"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="sender.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="ID_SenderMessegesEntry"
+                                       Placeholder="ID wysyłającego"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Image Source="receiver.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="ID_RecieverMessegesEntry"
+                                       Placeholder="ID odbiorcy"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}" />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Image Source="chat.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="titleMessegesEntry"
+                                       Placeholder="Tytuł wiadomości"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}" />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Image Source="newMessage.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="contentMessegesEntry"
+                                       Placeholder="Treść wiadomości"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}" />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Button Text="Wyślij wiadomość"
+                                Clicked="SaveButtonMesseges_Clicked"
+                                TextColor="{StaticResource txtColor}"        
+                                BackgroundColor="{StaticResource fieldColor}"
+                                 HorizontalOptions="FillAndExpand"
+                                 CornerRadius="{StaticResource borderRadius}"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout></StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Label TextColor="{StaticResource txtColor}"
+                                      Text="Poinformuj o spóźnieniu"
+                                       HorizontalOptions="CenterAndExpand"
+                                   FontSize="Medium"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="group.png"/>
+                                    <Picker Title="Wybierz grupę"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand"
+                                        x:Name="pickerLate">
+                                        <Picker.ItemsSource>
+
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </StackLayout>
+
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="messages.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="contentEntry"
+                                       Placeholder="Powód"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Image Source="timer.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="timerEntry"
+                                       Placeholder="podaj w [min]"
+                                       Keyboard="Numeric"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}" />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout></StackLayout>
+                            </ViewCell>
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Button Text="Powiadom"
+                                Clicked="saveButtonNews_Clicked"
+                                TextColor="{StaticResource txtColor}"        
+                                BackgroundColor="{StaticResource fieldColor}"
+                                 HorizontalOptions="FillAndExpand"
+                                 CornerRadius="{StaticResource borderRadius}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Label TextColor="{StaticResource txtColor}"
+                                       Text="Poinformuj o odwołaniu zajęć"
+                                       FontSize="Medium"
+                                       HorizontalOptions="CenterAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="group.png"/>
+                                    <Picker Title="Wybierz grupę"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Informatyka, VII sem, dzienne</x:String>
+                                                <x:String>Grafika, V sem, zaoczne</x:String>
+                                                <x:String>Informatyka, III sem, zaoczne</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </StackLayout>
+
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="messages.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="contentCancelledEntry"
+                                       Placeholder="Powód"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="subject.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="subjectCancelledEntry"
+                                       Placeholder="Nazwa przedmiotu"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Image Source="CalendarBlue.png"/>
+                                    <Label Text="Zajęcia odwołane z:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium"/>
+
+                                    <DatePicker MinimumDate="01/01/2018"
+                                            TextColor="{StaticResource txtColor}"
+                                            HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout></StackLayout>
+                            </ViewCell>
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Button Text="Powiadom"
+                                TextColor="{StaticResource txtColor}"        
+                                BackgroundColor="{StaticResource fieldColor}"
+                                 HorizontalOptions="FillAndExpand"
+                                 CornerRadius="{StaticResource borderRadius}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Label TextColor="{StaticResource txtColor}"
+                                       Text="Poinformuj o przeniesieniu zajęć"
+                                       FontSize="Medium"
+                                       HorizontalOptions="CenterAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="group.png"/>
+                                    <Picker Title="Wybierz grupę"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Informatyka, VII sem, dzienne</x:String>
+                                                <x:String>Grafika, V sem, zaoczne</x:String>
+                                                <x:String>Informatyka, III sem, zaoczne</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </StackLayout>
+
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="messages.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="contentTransferredEntry"
+                                       Placeholder="Powód"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Image Source="CalendarBlue.png"/>
+                                    <Label Text="Zajęcia przenione z:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium"/>
+
+                                    <DatePicker MinimumDate="01/01/2018"
+                                            TextColor="{StaticResource txtColor}"
+                                            HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Image Source="calendarRed.png"/>
+                                    <Label Text="Zajęcia przenione na:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium"/>
+
+                                    <DatePicker MinimumDate="01/01/2018"
+                                            TextColor="{StaticResource txtColor}"
+                                            HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout></StackLayout>
+                            </ViewCell>
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Button Text="Powiadom"
+                                Clicked="LecturerTransferred_Clicled"
+                                TextColor="{StaticResource txtColor}"        
+                                BackgroundColor="{StaticResource fieldColor}"
+                                 HorizontalOptions="FillAndExpand"
+                                 CornerRadius="{StaticResource borderRadius}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </Frame>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>
