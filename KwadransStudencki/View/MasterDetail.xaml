@@ -41,7 +41,7 @@
                     <Button TextColor="#F2F2F0"
                             Text="Wstaw do bazy"
                             BackgroundColor="{StaticResource bckColor}"
-                            Clicked="InsertDBButton"
+                            Clicked="AdminPanelButton"
                             CornerRadius="{StaticResource borderRadius}"
                             IsVisible="{Binding IsVisibleInsertDBButton}"
                             ImageSource="panel.png"/>
