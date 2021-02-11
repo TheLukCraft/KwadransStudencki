@@ -2,73 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KwadransStudencki.View.AdminCreateUsers">
-    <StackLayout BackgroundColor="{StaticResource bckColor}">
-        <Frame BackgroundColor="{StaticResource bckColor}">
-            <TableView Intent="Form">
-                <TableRoot>
-                    <TableSection>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
-                                <Label TextColor="{StaticResource txtColor}"
-                                      Text="Zarejestruj Starostę"
-                                       HorizontalOptions="CenterAndExpand"
-                                   FontSize="Medium"/>
-                            </StackLayout>
-                        </ViewCell>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
-                                <Image Source="group.png"/>
-                                <Picker Title="Wybierz grupę"
-                                        TitleColor="{StaticResource txtColor}"
-                                        TextColor="{StaticResource txtColor}"
-                                        HorizontalOptions="FillAndExpand"
-                                        x:Name="pickerListOfSpecialization">
-                                    <Picker.ItemsSource>
-
-                                    </Picker.ItemsSource>
-                                </Picker>
-                            </StackLayout>
-
-                        </ViewCell>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
-                                <Image Source="student.png"/>
-                                <Entry TextColor="{StaticResource txtColor}"
-                                       x:Name="loginUsersEntry"
-                                       Placeholder="Login"
-                                       HorizontalOptions="FillAndExpand"
-                                       PlaceholderColor="{StaticResource txtColor}"
-                                       />
-                            </StackLayout>
-                        </ViewCell>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="13,0">
-                                <Image Source="password.png"/>
-                                <Entry TextColor="{StaticResource txtColor}"
-                                       x:Name="passwordUsersEntry"
-                                       Placeholder="Hasło"
-                                       HorizontalOptions="FillAndExpand"
-                                       PlaceholderColor="{StaticResource txtColor}" />
-                            </StackLayout>
-                        </ViewCell>
-                        <ViewCell>
-                            <StackLayout></StackLayout>
-                        </ViewCell>
-
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="13,0">
-                                <Button Text="Utwórz użytkownika"
-                                 x:Name="saveButtonLogin"
-                                Clicked="SaveButton_Clicked"
-                                TextColor="{StaticResource txtColor}"        
-                                BackgroundColor="{StaticResource fieldColor}"
-                                 HorizontalOptions="FillAndExpand"
-                                 CornerRadius="{StaticResource borderRadius}"/>
-                            </StackLayout>
-                        </ViewCell>
-                    </TableSection>
-                </TableRoot>
-            </TableView>
-        </Frame>
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
