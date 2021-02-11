@@ -88,7 +88,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\student2.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KwadransStudencki\KwadransStudencki.csproj">
       <Project>{FA2AF231-A076-41FF-B754-660BDFF82520}</Project>
@@ -188,10 +190,28 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\trash.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\professor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\diploma.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionKwadransStudenckiAndroidHideInfoBar="True" TriggeredFromHotReload="False" />
+      <UserProperties XamarinHotReloadUnhandledDeviceExceptionKwadransStudenckiAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionKwadransStudenckiAndroidHideInfoBar="True" TriggeredFromHotReload="False" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

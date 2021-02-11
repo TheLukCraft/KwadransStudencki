@@ -38,9 +38,9 @@ namespace KwadransStudencki.View
             Detail = new NavigationPage(new Login());
             IsPresented = false;
         }
-        void InsertDBButton(object sender, System.EventArgs e)
+        void AdminPanelButton(object sender, System.EventArgs e)
         {
-            Detail = new NavigationPage(new InsertDB());
+            Detail = new NavigationPage(new AdminPanel());
             IsPresented = false;
         }
         void DeleteDBButton(object sender, System.EventArgs e)
