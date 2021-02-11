@@ -43,7 +43,7 @@
                         </ViewCell>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Padding="13,0">
-                                <Image Source="timer.png"/>
+                                <Image Source="timer2.png"/>
                                 <Entry TextColor="{StaticResource txtColor}"
                                        x:Name="timerEntry"
                                        Placeholder="podaj w [min]"

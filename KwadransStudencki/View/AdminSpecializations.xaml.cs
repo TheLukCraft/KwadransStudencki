@@ -16,5 +16,14 @@ namespace KwadransStudencki.View
         {
             InitializeComponent();
         }
+
+        private void CreateGroup_Clicked(object sender, EventArgs e)
+        {
+
+        }
+        //private void AddLecturerToGrup_Clicked(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }

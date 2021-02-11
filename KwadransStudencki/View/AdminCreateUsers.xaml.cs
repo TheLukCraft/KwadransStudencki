@@ -82,11 +82,6 @@ namespace KwadransStudencki.View
                 }
             }
         }
-
-        private void AddLecturerToGrup_Clicked(object sender, EventArgs e)
-        {
-
-        }
             private void CreateAdmin_Clicked(object sender, EventArgs e)
         {
             Users users = new Users()

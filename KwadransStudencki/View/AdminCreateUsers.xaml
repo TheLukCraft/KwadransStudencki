@@ -149,59 +149,6 @@
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
                                     <Label TextColor="{StaticResource txtColor}"
-                                      Text="Przypisywanie grup do wykładowcy"
-                                       HorizontalOptions="CenterAndExpand"
-                                   FontSize="Medium"/>
-                                </StackLayout>
-                            </ViewCell>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
-                                    <Image Source="group.png"/>
-                                    <Picker Title="Wybierz grupę dla wykładowcy"
-                                        TitleColor="{StaticResource txtColor}"
-                                        TextColor="{StaticResource txtColor}"
-                                        HorizontalOptions="FillAndExpand"
-                                        x:Name="pickGroupsForLecturer">
-                                        <Picker.ItemsSource>
-
-                                        </Picker.ItemsSource>
-                                    </Picker>
-                                </StackLayout>
-
-                            </ViewCell>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
-                                    <Image Source="professor.png"/>
-                                    <Picker Title="Wybierz wykładowcę"
-                                        TitleColor="{StaticResource txtColor}"
-                                        TextColor="{StaticResource txtColor}"
-                                        HorizontalOptions="FillAndExpand"
-                                        x:Name="pickLecturer">
-                                        <Picker.ItemsSource>
-
-                                        </Picker.ItemsSource>
-                                    </Picker>
-                                </StackLayout>
-
-                            </ViewCell>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal" Padding="13,0">
-                                    <Button Text="Przypisz grupę do wykładowcy"
-                                Clicked="AddLecturerToGrup_Clicked"
-                                TextColor="{StaticResource txtColor}"        
-                                BackgroundColor="{StaticResource fieldColor}"
-                                 HorizontalOptions="FillAndExpand"
-                                 CornerRadius="{StaticResource borderRadius}"/>
-                                </StackLayout>
-                            </ViewCell>
-                            <ViewCell>
-                                <StackLayout></StackLayout>
-                            </ViewCell>
-                        </TableSection>
-                        <TableSection>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
-                                    <Label TextColor="{StaticResource txtColor}"
                                       Text="Tworzenie profilu administratora"
                                        HorizontalOptions="CenterAndExpand"
                                    FontSize="Medium"/>

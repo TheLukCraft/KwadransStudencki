@@ -75,7 +75,7 @@
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
                                     <Label TextColor="{StaticResource txtColor}"
-                                      Text="Poinformuj o spóźnieniu"
+                                      Text="Tworzenie komunikatu testowego"
                                        HorizontalOptions="CenterAndExpand"
                                    FontSize="Medium"/>
                                 </StackLayout>
@@ -108,7 +108,7 @@
                             </ViewCell>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0">
-                                    <Image Source="timer.png"/>
+                                    <Image Source="timer2.png"/>
                                     <Entry TextColor="{StaticResource txtColor}"
                                        x:Name="timerEntry"
                                        Placeholder="podaj w [min]"
@@ -117,10 +117,6 @@
                                        PlaceholderColor="{StaticResource txtColor}" />
                                 </StackLayout>
                             </ViewCell>
-                            <ViewCell>
-                                <StackLayout></StackLayout>
-                            </ViewCell>
-
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0">
                                     <Button Text="Powiadom"
@@ -131,8 +127,11 @@
                                  CornerRadius="{StaticResource borderRadius}"/>
                                 </StackLayout>
                             </ViewCell>
+                            <ViewCell>
+                                <StackLayout></StackLayout>
+                            </ViewCell>
                         </TableSection>
-                        <TableSection>
+                        <!--<TableSection>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
                                     <Label TextColor="{StaticResource txtColor}"
@@ -204,8 +203,11 @@
                                  CornerRadius="{StaticResource borderRadius}"/>
                                 </StackLayout>
                             </ViewCell>
-                        </TableSection>
-                        <TableSection>
+                            <ViewCell>
+                                <StackLayout></StackLayout>
+                            </ViewCell>
+                        </TableSection>-->
+                        <!--<TableSection>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
                                     <Label TextColor="{StaticResource txtColor}"
@@ -277,7 +279,7 @@
                                  CornerRadius="{StaticResource borderRadius}"/>
                                 </StackLayout>
                             </ViewCell>
-                        </TableSection>
+                        </TableSection>-->
                     </TableRoot>
                 </TableView>
             </Frame>

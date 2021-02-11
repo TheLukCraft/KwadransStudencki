@@ -2,11 +2,133 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KwadransStudencki.View.AdminSpecializations">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ScrollView>
+        <StackLayout BackgroundColor="{StaticResource bckColor}">
+            <Frame BackgroundColor="{StaticResource bckColor}">
+                <TableView Intent="Form">
+                    <TableRoot>
+                        <TableSection>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Label TextColor="{StaticResource txtColor}"
+                                      Text="Tworzenie grup studentów"
+                                       HorizontalOptions="CenterAndExpand"
+                                   FontSize="Medium"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="specialization.png"/>
+                                    <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="createSpecialization"
+                                       Placeholder="Kierunek"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       />
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="calendar3.png"/>
+                                    <Picker Title="Rok"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand"
+                                        x:Name="pickYear">
+                                        <Picker.Items>
+                                            <x:String>I</x:String>
+                                            <x:String>II</x:String>
+                                            <x:String>III</x:String>
+                                            <x:String>IV</x:String>
+                                            <x:String>V</x:String>
+                                            <x:String>VI</x:String>
+                                        </Picker.Items>
+                                    </Picker>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="mode.png"/>
+                                    <Picker Title="Tryb"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand"
+                                        x:Name="pickMode">
+                                        <Picker.Items>
+                                            <x:String>Dzienny</x:String>
+                                            <x:String>Zaoczny</x:String>
+                                        </Picker.Items>
+                                    </Picker>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Button Text="Utwórz grupę studentów"
+                                TextColor="{StaticResource txtColor}"        
+                                BackgroundColor="{StaticResource fieldColor}"
+                                 HorizontalOptions="FillAndExpand"
+                                 CornerRadius="{StaticResource borderRadius}"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout></StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Label TextColor="{StaticResource txtColor}"
+                                      Text="Przypisywanie grup do wykładowcy"
+                                       HorizontalOptions="CenterAndExpand"
+                                   FontSize="Medium"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="group.png"/>
+                                    <Picker Title="Wybierz grupę dla wykładowcy"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand"
+                                        x:Name="pickGroupsForLecturer">
+                                        <Picker.ItemsSource>
+
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </StackLayout>
+
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="professor.png"/>
+                                    <Picker Title="Wybierz wykładowcę"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand"
+                                        x:Name="pickLecturer">
+                                        <Picker.ItemsSource>
+
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </StackLayout>
+
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Button Text="Przypisz grupę do wykładowcy"
+                                TextColor="{StaticResource txtColor}"        
+                                BackgroundColor="{StaticResource fieldColor}"
+                                 HorizontalOptions="FillAndExpand"
+                                 CornerRadius="{StaticResource borderRadius}"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout></StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </Frame>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>
