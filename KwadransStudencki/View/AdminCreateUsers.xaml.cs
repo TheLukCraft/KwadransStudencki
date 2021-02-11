@@ -48,6 +48,7 @@ namespace KwadransStudencki.View
 
         private void CreateLecturer_Clicked(object sender, EventArgs e)
         {
+            int _currentID = 0; 
             Users users = new Users()
             {
                 Login = loginLecturerEntry.Text,
@@ -56,7 +57,7 @@ namespace KwadransStudencki.View
             };
             Lecturers lecturers = new Lecturers()
             {
-                IdUser = users.IdUser,
+                IdUser = _currentID,
                 AcademicTitle = (string)pickerAcademicTitle.SelectedItem,
                 Name = nameLecturerEntry.Text
             };
@@ -65,6 +66,7 @@ namespace KwadransStudencki.View
                 conn.CreateTable<Users>();
                 conn.CreateTable<Lecturers>();
                 int rowsAdded = conn.Insert(users);
+                _currentID = conn.Table<Users>().Max(x => x.IdUser);
                 int rowsAdded2 = conn.Insert(lecturers);
                 conn.Close();
                 if (rowsAdded > 0)

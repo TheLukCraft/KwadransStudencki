@@ -64,7 +64,8 @@
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0">
                                     <Button Text="Utwórz grupę studentów"
-                                TextColor="{StaticResource txtColor}"        
+                                TextColor="{StaticResource txtColor}"       
+                                 Clicked="CreateGroup_Clicked"
                                 BackgroundColor="{StaticResource fieldColor}"
                                  HorizontalOptions="FillAndExpand"
                                  CornerRadius="{StaticResource borderRadius}"/>
