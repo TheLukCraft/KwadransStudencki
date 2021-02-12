@@ -19,8 +19,8 @@ namespace KwadransStudencki.View
             InitializeComponent();
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
-                var listOfUsers = conn.Table<Specialization>().Select(x => x.NameOfSpecialization).ToList();
-                pickerLate.ItemsSource = listOfUsers;
+                var listOfSpecialization = conn.Table<Specialization>().Select(x => x.NameOfSpecialization).ToList();
+                pickerLate.ItemsSource = listOfSpecialization;
 
             }
              
@@ -35,7 +35,8 @@ namespace KwadransStudencki.View
                 Mode = "Dzienne",
                 Content = contentEntry.Text,
                 DateWhen = DateTime.Now.ToString(),
-                Delay = timerEntry.Text
+                Delay = timerEntry.Text,
+                TypeOfNews = "beingLate"
             };
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {

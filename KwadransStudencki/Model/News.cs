@@ -19,5 +19,6 @@ namespace KwadransStudencki.Model
         public string ID_Lecturer { get; set; }
         public string DateWhen { get; set; }
         public string Delay { get; set; }
+        public string TypeOfNews { get; set; }
     }
 }

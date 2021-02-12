@@ -27,10 +27,6 @@ namespace KwadransStudencki.View
                 var news = conn.Table<News>().ToList();
 
                 NewsView.ItemsSource = news;
-                //conn.CreateTable<Admins>();
-                //var admins = conn.Table<Admins>().ToList();
-
-                //AdminsView.
                 conn.Close();
             }
         }
