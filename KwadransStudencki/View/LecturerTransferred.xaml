@@ -45,6 +45,17 @@
                             </StackLayout>
                         </ViewCell>
                         <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                <Image Source="subject.png"/>
+                                <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="subjectCancelledEntry"
+                                       Placeholder="Nazwa przedmiotu"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
                             <StackLayout Orientation="Horizontal" Padding="13,0">
                                 <Image Source="CalendarBlue.png"/>
                                 <Label Text="Zajęcia przenione z:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium"/>

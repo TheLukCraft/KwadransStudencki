@@ -87,7 +87,7 @@
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
                                     <Image Source="group.png"/>
-                                    <Picker Title="Wybierz grupę dla wykładowcy"
+                                    <Picker Title="Wybierz grupę"
                                         TitleColor="{StaticResource txtColor}"
                                         TextColor="{StaticResource txtColor}"
                                         HorizontalOptions="FillAndExpand"
@@ -117,6 +117,58 @@
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0">
                                     <Button Text="Przypisz grupę do wykładowcy"
+                                TextColor="{StaticResource txtColor}"        
+                                BackgroundColor="{StaticResource fieldColor}"
+                                 HorizontalOptions="FillAndExpand"
+                                 CornerRadius="{StaticResource borderRadius}"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout></StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Label TextColor="{StaticResource txtColor}"
+                                      Text="Przypisywanie starosty do grupy"
+                                       HorizontalOptions="CenterAndExpand"
+                                   FontSize="Medium"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="group.png"/>
+                                    <Picker Title="Wybierz grupę"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand"
+                                        x:Name="pickGroupsForStaroste">
+                                        <Picker.ItemsSource>
+
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </StackLayout>
+
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                    <Image Source="student2.png"/>
+                                    <Picker Title="Wybierz starostę"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand"
+                                        x:Name="pickStaroste">
+                                        <Picker.ItemsSource>
+
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </StackLayout>
+
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Button Text="Przypisz starostę do grupy"
                                 TextColor="{StaticResource txtColor}"        
                                 BackgroundColor="{StaticResource fieldColor}"
                                  HorizontalOptions="FillAndExpand"

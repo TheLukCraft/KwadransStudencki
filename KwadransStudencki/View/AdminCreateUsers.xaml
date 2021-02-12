@@ -74,7 +74,7 @@
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
                                     <Label TextColor="{StaticResource txtColor}"
-                                      Text="Tworzenie profilu wykładowcy"
+                                      Text="Tworzenie profilu prowadzącego"
                                        HorizontalOptions="CenterAndExpand"
                                    FontSize="Medium"/>
                                 </StackLayout>
@@ -133,7 +133,7 @@
                             </ViewCell>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0">
-                                    <Button Text="Zarejestruj wykładowcę"
+                                    <Button Text="Zarejestruj prowadzącego"
                                 Clicked="CreateLecturer_Clicked"
                                 TextColor="{StaticResource txtColor}"        
                                 BackgroundColor="{StaticResource fieldColor}"

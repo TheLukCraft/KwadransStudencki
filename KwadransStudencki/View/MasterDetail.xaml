@@ -39,7 +39,7 @@
                             ImageSource="login.png"/>
 
                     <Button TextColor="#F2F2F0"
-                            Text="Wstaw do bazy"
+                            Text="Wstaw do bazy danych"
                             BackgroundColor="{StaticResource bckColor}"
                             Clicked="AdminPanelButton"
                             CornerRadius="{StaticResource borderRadius}"
@@ -47,7 +47,7 @@
                             ImageSource="panel.png"/>
 
                     <Button TextColor="#F2F2F0"
-                            Text="Usuń tabele z bazy"
+                            Text="Usuń z bazy danych"
                             BackgroundColor="{StaticResource bckColor}"
                             CornerRadius="{StaticResource borderRadius}"
                             Clicked="DeleteDBButton"
