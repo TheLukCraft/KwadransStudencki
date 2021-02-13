@@ -229,7 +229,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties TriggeredFromHotReload="False" XamarinHotReloadDebuggerTimeoutExceptionKwadransStudenckiAndroidHideInfoBar="True" XamarinHotReloadUnhandledDeviceExceptionKwadransStudenckiAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadUnhandledDeviceExceptionKwadransStudenckiAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionKwadransStudenckiAndroidHideInfoBar="True" TriggeredFromHotReload="False" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

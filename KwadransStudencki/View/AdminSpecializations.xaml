@@ -175,9 +175,6 @@
                                  CornerRadius="{StaticResource borderRadius}"/>
                                 </StackLayout>
                             </ViewCell>
-                            <ViewCell>
-                                <StackLayout></StackLayout>
-                            </ViewCell>
                         </TableSection>
                     </TableRoot>
                 </TableView>
