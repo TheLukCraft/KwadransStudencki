@@ -13,7 +13,7 @@ namespace KwadransStudencki
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new InsertDB());
+            MainPage = new NavigationPage(new MasterDetail());
         }
         public App(string filePath)
         {

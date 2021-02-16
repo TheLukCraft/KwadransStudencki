@@ -2,44 +2,74 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KwadransStudencki.View.NewMessage">
-    <StackLayout BackgroundColor="#1c2c40">
-        <Label x:Name="ToUser"
-               Text="{Binding Source }"/>
-        <Editor BackgroundColor="#F2F2F0"
-               AutoSize="TextChanges" 
-                VerticalOptions="Start"/>
-        <Button HorizontalOptions="Center"
-                VerticalOptions="End"/>
+    <StackLayout BackgroundColor="{StaticResource bckColor}">
+        <Frame BackgroundColor="{StaticResource bckColor}">
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                <Label TextColor="{StaticResource txtColor}"
+                                      Text="Wyślij nową wiadomość"
+                                       HorizontalOptions="CenterAndExpand"
+                                   FontSize="Medium"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                <Image Source="group.png"/>
+                                <Picker Title="Wybierz odbiorcę"
+                                        TitleColor="{StaticResource txtColor}"
+                                        TextColor="{StaticResource txtColor}"
+                                        HorizontalOptions="FillAndExpand"
+                                        x:Name="pickerLate">
+                                    <Picker.ItemsSource>
+
+                                    </Picker.ItemsSource>
+                                </Picker>
+                            </StackLayout>
+
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
+                                <Image Source="messages.png"/>
+                                <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="contentEntry"
+                                       Placeholder="Tytuł"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Image Source="chat.png"/>
+                                <Entry TextColor="{StaticResource txtColor}"
+                                       x:Name="timerEntry"
+                                       Placeholder="Treść wiadomości"
+                                       Keyboard="Numeric"
+                                       HorizontalOptions="FillAndExpand"
+                                       PlaceholderColor="{StaticResource txtColor}"
+                                       HeightRequest="100"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout></StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Button Text="Wyślij wiadomość"
+                                Clicked="NewMessage_Clicled"
+                                TextColor="{StaticResource txtColor}"        
+                                BackgroundColor="{StaticResource fieldColor}"
+                                 HorizontalOptions="FillAndExpand"
+                                 CornerRadius="{StaticResource borderRadius}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </Frame>
     </StackLayout>
-
-    <!--<RelativeLayout BackgroundColor="#1c2c40">
-
-        <Image RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, Property=X, ElementName=buttonLecturer}"
-               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Y, ElementName=buttonLecturer}"
-               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, Property=Height, ElementName=buttonLecturer, Factor=1}"
-               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, Property=Width, ElementName=buttonLecturer, Factor=0.2}"
-               Source="https://img.icons8.com/plasticine/100/000000/expand-arrow.png"
-               Scale="1"
-               
-                />
-        <Editor RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
-               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25}"
-               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45}"
-               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
-               BackgroundColor="#F2F2F0"
-               AutoSize="TextChanges" 
-                
-               />
-        <Button RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.75}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
-                BackgroundColor="#2C3F59"
-                Text="Wyślij"
-                FontSize="16"
-                TextColor="White"
-                x:Name="buttonSend"
-                CornerRadius="20"
-                />
-    </RelativeLayout>-->
 </ContentPage>

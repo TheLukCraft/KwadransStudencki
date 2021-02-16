@@ -46,13 +46,14 @@ namespace KwadransStudencki.View
         async private void DeleteMessage_Clicked(object sender, System.EventArgs e)
         {
             var asc = (ImageButton)sender;
-            bool das = await DisplayAlert("Usunąć wiadomość?", "Czy chcesz usunąć tą wiadomość?", "Tak", "Nie");
+            bool das = await DisplayAlert("Usunąć wiadomość?",
+                "Czy chcesz usunąć tą wiadomość?", "Tak", "Nie");
             if(das == true)
             {
                 using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
                 {
-                    //var deleteMessage = conn.Table<Message>().Where(x => (int)asc.CommandParameter == x.IdMessages);
-                    conn.Query<Message>("DELETE FROM Message WHERE IdMessages == " + (int)asc.CommandParameter);
+                    conn.Query<Message>("DELETE FROM Message WHERE IdMessages == " +
+                        (int)asc.CommandParameter);
                 }
                 OnAppearing();
             }
@@ -60,7 +61,6 @@ namespace KwadransStudencki.View
             {
                 OnAppearing();
             }
-            
         }
         void OnImageNameTapped(object sender, EventArgs args)
         {

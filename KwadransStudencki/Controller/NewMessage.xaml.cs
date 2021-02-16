@@ -35,5 +35,9 @@ namespace KwadransStudencki.View
         //{
         //    var selected = pickerOfLecturers.Items[pickerOfLecturers.SelectedIndex];
         //}
+        private void NewMessage_Clicled(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
