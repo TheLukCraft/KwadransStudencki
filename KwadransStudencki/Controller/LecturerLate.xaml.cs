@@ -31,8 +31,8 @@ namespace KwadransStudencki.View
             {
                 DateOfNews = DateTime.Now.ToString(),
                 Specialization = pickerLate.SelectedItem.ToString(),
-                Semestr = "II",
-                Mode = "Zaoczne",
+                Semestr = "I",
+                Mode = "dzienne",
                 Content = contentEntry.Text,
                 DateWhen = DateTime.Now.ToString(),
                 Delay = timerEntry.Text,

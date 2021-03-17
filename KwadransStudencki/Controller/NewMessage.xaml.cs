@@ -24,7 +24,7 @@ namespace KwadransStudencki.View
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 //var listOfLecturers = conn.Table<Users>().Where(u => u.Account == "Lecturer").ToList();
-                var listOfLecturers = conn.Query<StarosteAndGroup>("SELECT Staroste FROM StarosteAndGroup").ToList();
+                var listOfLecturers = conn.Query<StarosteAndGroup>("SELECT * FROM StarosteAndGroup").ToList();
                 if (listOfLecturers != null)
                 {
                     pickerOfLecturers.ItemsSource = listOfLecturers;
@@ -37,7 +37,30 @@ namespace KwadransStudencki.View
         }
         private void NewMessage_Clicled(object sender, EventArgs e)
         {
-           
+            Message message = new Message()
+            {
+                Time = DateTime.UtcNow.Date.ToString(),
+                ID_Sender = (string)Application.Current.Properties["IDSession"],
+                ID_Reciever = pickerOfLecturers.Items[pickerOfLecturers.SelectedIndex],
+                Title = titleMessageEntry.Text,
+                Content = ContentMessageEntry.Text
+            };
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<Message>();
+                int rowsAdded = conn.Insert(message);
+                conn.Close();
+                if (rowsAdded > 0)
+                {
+                    DisplayAlert("Udało się", "pomyślnie wstawiono", "ok");
+                    Navigation.PushAsync(new Messages());
+                }
+                    
+                else
+                {
+                    DisplayAlert("Błąd", "Nie wstawiono danych", "ok");
+                }
+            }
         }
     }
 }

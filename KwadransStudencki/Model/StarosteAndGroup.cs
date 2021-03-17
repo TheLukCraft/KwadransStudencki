@@ -13,7 +13,7 @@ namespace KwadransStudencki.Model
         public string Group { get; set; }
         public override string ToString()
         {
-            return Staroste + Group;
+            return Staroste + ", " + Group;
         }
     }
 }

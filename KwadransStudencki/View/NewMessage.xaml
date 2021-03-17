@@ -34,7 +34,7 @@
                             <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
                                 <Image Source="messages.png"/>
                                 <Entry TextColor="{StaticResource txtColor}"
-                                       x:Name="contentEntry"
+                                       x:Name="titleMessageEntry"
                                        Placeholder="Tytuł"
                                        HorizontalOptions="FillAndExpand"
                                        PlaceholderColor="{StaticResource txtColor}"
@@ -45,9 +45,8 @@
                             <StackLayout Orientation="Horizontal" Padding="13,0">
                                 <Image Source="chat.png"/>
                                 <Entry TextColor="{StaticResource txtColor}"
-                                       x:Name="timerEntry"
+                                       x:Name="ContentMessageEntry"
                                        Placeholder="Treść wiadomości"
-                                       Keyboard="Numeric"
                                        HorizontalOptions="FillAndExpand"
                                        PlaceholderColor="{StaticResource txtColor}"
                                        HeightRequest="100"/>

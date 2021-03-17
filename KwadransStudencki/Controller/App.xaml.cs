@@ -29,8 +29,8 @@ namespace KwadransStudencki
             //    conn.CreateTable<Users>();
             //    int rowsAdded = conn.Insert(users);
             //    conn.Close();
-
             //}
+
             //Specialization specialization = new Specialization()
             //{
             //    NameOfSpecialization = "Grafika"
