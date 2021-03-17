@@ -171,8 +171,10 @@
                                     <Button Text="Przypisz starostę do grupy"
                                 TextColor="{StaticResource txtColor}"        
                                 BackgroundColor="{StaticResource fieldColor}"
-                                 HorizontalOptions="FillAndExpand"
-                                 CornerRadius="{StaticResource borderRadius}"/>
+                                HorizontalOptions="FillAndExpand"
+                                CornerRadius="{StaticResource borderRadius}"
+                                Clicked="AssignStaroteToGroup_Clicked"            
+                                            />
                                 </StackLayout>
                             </ViewCell>
                         </TableSection>

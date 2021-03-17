@@ -17,5 +17,9 @@ namespace KwadransStudencki.Model
         public string Degree { get; set; }
         public int Group { get; set; }
         public string Login { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

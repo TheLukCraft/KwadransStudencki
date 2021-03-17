@@ -24,17 +24,17 @@ namespace KwadransStudencki.View
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 //var listOfLecturers = conn.Table<Users>().Where(u => u.Account == "Lecturer").ToList();
-                //var listOfLecturers = conn.Query<Users>("SELECT IdUser,Login, TypeAccount FROM Users WHERE TypeAccount=='Lecturer'").ToList();
-                //if (listOfLecturers != null)
-                //{
-                //    pickerOfLecturers.ItemsSource = listOfLecturers;
-                //}
+                var listOfLecturers = conn.Query<StarosteAndGroup>("SELECT Staroste FROM StarosteAndGroup").ToList();
+                if (listOfLecturers != null)
+                {
+                    pickerOfLecturers.ItemsSource = listOfLecturers;
+                }
             }
         }
-        //void SelectedIndex(object sender, System.EventArgs e)
-        //{
-        //    var selected = pickerOfLecturers.Items[pickerOfLecturers.SelectedIndex];
-        //}
+        void SelectedIndex(object sender, System.EventArgs e)
+        {
+            var selected = pickerOfLecturers.Items[pickerOfLecturers.SelectedIndex];
+        }
         private void NewMessage_Clicled(object sender, EventArgs e)
         {
            

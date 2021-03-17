@@ -22,7 +22,7 @@
                                         TitleColor="{StaticResource txtColor}"
                                         TextColor="{StaticResource txtColor}"
                                         HorizontalOptions="FillAndExpand"
-                                        x:Name="pickerLate">
+                                        x:Name="pickerOfLecturers">
                                     <Picker.ItemsSource>
 
                                     </Picker.ItemsSource>

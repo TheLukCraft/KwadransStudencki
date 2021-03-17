@@ -32,7 +32,7 @@ namespace KwadransStudencki.View
                 conn.CreateTable<Specialization>();
                 int rowsAdded = conn.Insert(specialization);
                 conn.Close();
-                if(rowsAdded > 0)
+                if (rowsAdded > 0)
                 {
                     DisplayAlert("Udało się", "pomyślnie wstawiono", "ok");
                     createSpecialization.Text = string.Empty;
@@ -45,10 +45,53 @@ namespace KwadransStudencki.View
                 }
             }
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                var listOfSpecializations = conn.Query<Specialization>("SELECT NameOfSpecialization FROM Specialization").ToList();
+                if (listOfSpecializations != null)
+                {
+                    pickGroupsForStaroste.ItemsSource = listOfSpecializations;
+                }
+                var listOfStaroste = conn.Query<Users>("SELECT Login FROM Users WHERE TypeAccount =='Staroste'").ToList();
+                if (listOfStaroste != null)
+                {
+                    pickStaroste.ItemsSource = listOfStaroste;
+                }
+            }
+        }
+        void SelectedIndex(object sender, System.EventArgs e)
+        {
+            var selectedStaroste = pickStaroste.Items[pickStaroste.SelectedIndex];
+            var selectedGroup = pickGroupsForStaroste.Items[pickGroupsForStaroste.SelectedIndex];
+        }
 
-        //private void AddLecturerToGrup_Clicked(object sender, EventArgs e)
-        //{
+        private void AssignStaroteToGroup_Clicked(object sender, EventArgs e)
+        {
+            StarosteAndGroup starosteAndGroup = new StarosteAndGroup()
+            {
+                Staroste = pickStaroste.Items[pickStaroste.SelectedIndex],
+                Group = pickGroupsForStaroste.Items[pickGroupsForStaroste.SelectedIndex]
+            };
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<StarosteAndGroup>();
+                int rowsAdded = conn.Insert(starosteAndGroup);
+                conn.Close();
+                if (rowsAdded > 0)
+                {
+                    DisplayAlert("Udało się", "pomyślnie wstawiono", "ok");
+                    pickStaroste.SelectedIndex = -1;
+                    pickGroupsForStaroste.SelectedIndex = -1;
+                }
 
-        //}
+                else
+                {
+                    DisplayAlert("Błąd", "Nie wstawiono danych", "ok");
+                }
+            }
+        }
     }
 }

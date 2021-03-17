@@ -5,14 +5,16 @@ using System.Text;
 
 namespace KwadransStudencki.Model
 {
-    class Specialization
+    class StarosteAndGroup
     {
         [PrimaryKey, AutoIncrement]
-        public int IdSpecialization { get; set; }
-        public string NameOfSpecialization { get; set; }
+        public int IdStarosteAndGroup { get; set; }
+        public string Staroste { get; set; }
+        public string Group { get; set; }
         public override string ToString()
         {
-            return NameOfSpecialization;
+            return Staroste + Group;
         }
     }
 }
+

@@ -27,6 +27,7 @@ namespace KwadransStudencki.View
                 Password = passwordUsersEntry.Text,
                 TypeAccount = "Staroste"
             };
+          
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 conn.CreateTable<Users>();

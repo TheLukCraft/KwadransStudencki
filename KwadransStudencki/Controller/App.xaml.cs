@@ -42,6 +42,11 @@ namespace KwadransStudencki
             //    conn.Close();
 
             //}
+
+            //using (SQLiteConnection conn = new SQLiteConnection(filePath))
+            //{
+            //    conn.CreateTable<Staroste>();
+            //}
             Application.Current.Properties.Clear();
             MainPage = new NavigationPage(new MasterDetail());
             FilePath = filePath;

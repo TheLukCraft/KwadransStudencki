@@ -16,7 +16,7 @@
                                    FontSize="Medium"/>
                                 </StackLayout>
                             </ViewCell>
-                            <ViewCell>
+                            <!--<ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
                                     <Image Source="group.png"/>
                                     <Picker Title="Wybierz grupę dla starosty"
@@ -33,7 +33,7 @@
                                     </Picker>
                                 </StackLayout>
 
-                            </ViewCell>
+                            </ViewCell>-->
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="13,0" Visual="Material">
                                     <Image Source="student2.png"/>
